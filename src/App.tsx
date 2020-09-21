@@ -35,7 +35,7 @@ function App() {
   }, [currentPage, pageLimits.max]);
 
   return (
-    <div className='App'>
+    <div className='App' style={{ width: '100vw', height: '100vh' }}>
       <Document
         file={examplePDF}
         onLoadError={onDocumentLoadError}
@@ -52,6 +52,7 @@ function App() {
         >
           Previous
         </button>
+        <span>{` ${currentPage} | ${totalPages} `}</span>
         <button
           type='button'
           onClick={handleNext}
